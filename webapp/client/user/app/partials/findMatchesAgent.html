@@ -1,0 +1,24 @@
+<div class="modal-body" ng-if="!searchFinished">
+    <h3 class="modal-title">Searching for matches...</h3>
+</div>
+<div class="modal-body" ng-if="searchFinished">
+    <h3 class="modal-title">Found Matches</h3>
+    <h5>There are currently {{ d_model.matches }} suitable matches in this demographic.
+        Choose the number of people you wish to target for this agent.</h5>
+    <form>
+        <div class="form-group">
+            <label for="id_audience">Desired Matches</label>
+            <input id="id_audience" ng-model="a_model.audience" type="text" class="form-control" name="audience" required="required" />
+            <br>
+            <label for="id_budget">Budget</label>
+            <input id="id_budget" ng-model="a_model.budget" type="text" class="form-control" name="budget" required="required" />
+            <br>
+            <input type="checkbox" model="{{ a_model.active }}" class="boottoggle" data-on="Active" data-off="Inactive">
+        </div>
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-success" ng-disabled="notChosenDesiredMatches()" ng-click="ok()">Confirm</button>
+    <button type="button" class="btn btn-danger pull-left" ng-click="cancel()">Cancel</button>
+</div>

@@ -1,0 +1,5 @@
+Django==1.7.1
+django-custom-user==0.5
+django-tastypie==0.12.1
+Pillow==2.6.1
+block-io==1.1.2

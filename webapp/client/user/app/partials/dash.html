@@ -1,0 +1,49 @@
+<div my-loading-spinner="viewLoading">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"> Dashboard</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-shield fa-fw"></i> Active Campaigns
+                </div>
+
+                <div class="list-group">
+                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                       class="list-group-item">{{ campaign.name }} <span class="badge alert-danger">0/500</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-lg-6">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-shield fa-fw"></i> Active Agents
+                </div>
+
+                <div class="list-group">
+                    <a ng-repeat="agent in model.agents" ui-sref="agents_detail({ aid : agent.id })"
+                       class="list-group-item">{{ agent.name }} <span class="badge alert-danger">0/500</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+

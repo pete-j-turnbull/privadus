@@ -1,0 +1,26 @@
+<div class="modal-body" ng-if="!cancelled">
+    <h3 class="modal-title">Creating campaign...</h3>
+    <h5>Would you like to add an agent now?</h5>
+    <br>
+    <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{progress()}}"
+             aria-valuemin="0" aria-valuemax="100" style="width: {{progress()}}%">
+        </div>
+    </div>
+</div>
+<div class="modal-body" ng-if="cancelled">
+    <h3 class="modal-title">Cancelling...</h3>
+    <h5>Removing campaign and adverts, please wait...</h5>
+    <br>
+    <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{progress()}}"
+             aria-valuemin="0" aria-valuemax="100" style="width: {{progress()}}%">
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-info" ng-disabled="stillCreating()" ng-click="finish()">No Thanks</button>
+    <button type="button" class="btn btn-success" ng-disabled="stillCreating()" ng-click="addAgent()">Add Agent</button>
+    <button type="button" class="btn btn-danger pull-left" ng-click="cancel()">Cancel</button>
+</div>

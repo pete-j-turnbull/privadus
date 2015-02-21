@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Privadus">
+
+    <title>Privadus</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/visitor/css/custom.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body ng-app="webApp">
+
+    <nav class="navbar navbar-custom navbar-fixed-top landing" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    <img src="/static/images/logo_1.png" style="display:inline-block;width:28px;padding-bottom:6">
+                    Privadus</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/video/">Video</a>
+                    </li>
+                    <li>
+                        <a href="/advertiser/">For Advertisers</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About</a>
+                    </li>
+                    <li>
+                        <a href="/signin/">Sign In</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header>
+        <div class="container signin" ng-controller="LoginCtrl">
+            <div class="intro-text">
+
+                <div class="row">
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-4">
+
+                        <form method="post" ng-submit="login(loginForm)" name="loginForm">
+
+                            <div class="form-group">
+                                <label for="id_email">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                    <input name="email" id="id_email" type="email" ng-model="model.email" placeholder="Enter email" class="form-control" required="required"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_password">Password</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></span>
+                                    <input name="password" id="id_password" type="password" ng-model="model.password" placeholder="Enter password" class="form-control" required="required"/>
+                                </div>
+
+                                <div class="alert alert-danger _animate" ng-if="error">{{error}}</div>
+                            </div>
+
+                            <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-info">Sign in</button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Bower Components -->
+    <script type="text/javascript" src='/static/bower_components/angular/angular.min.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-resource/angular-resource.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-cookies/angular-cookies.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-sanitize/angular-sanitize.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script type="text/javascript" src='/static/bower_components/angular-animate/angular-animate.min.js'></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src='/static/visitor/js/custom.js'></script>
+
+    <script src='/static/visitor/app/app.js'></script>
+
+    <script src='/static/visitor/app/controllers/login.js'></script>
+    <script src='/static/visitor/app/services/djangoAuth.js'></script>
+    <script src='/static/visitor/app/services/validate.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="col-lg-12">
+    <div class="boxed-grey" id="signup_view" ng-controller="SignupCtrl">
+        <form id="signup-form" method="post" role="form" ng-submit="signup(signupForm)" name="signupForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="id_name">Name</label>
+                        <input id="id_name" ng-model="model.name" type="text" class="form-control" name="name" placeholder="Enter name" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="id_organisation">Organisation</label>
+                        <input id="id_organisation" ng-model="model.organisation" type="text" class="form-control" name="organisation" placeholder="Enter organisation" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="id_email">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                            <input id="id_email" ng-model="model.email" type="email" class="form-control" name="email" placeholder="Enter email" required="required" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password">Password</label>
+                        <input id="id_password" ng-model="model.password" type="password" class="form-control" name="password" placeholder="Enter password" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="id_password2">Re-type Password</label>
+                        <input id="id_password2" ng-model="model.password2" type="password" class="form-control" name="password2" placeholder="Re-Enter password" required="required" />
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="widget-signup">
+                        <h5>Group 11</h5>
+                        <address>
+                            <strong>Imperial College London</strong><br>
+                            180 Queen's Gate<br>
+                            South Kensington, London, SW7
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" ng-disabled="signupForm.$invalid" class="btn btn-info pull-right">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

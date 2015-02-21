@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html ng-app="webApp">
+<head>
+    <meta charset="utf-8">
+    <title>Privadus</title>
+
+    <!--Bootstrap Core CSS -->
+    <link href='/static/common/css/bootstrap.min.css' rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href='/static/common/fonts/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css">
+    <!-- Squad theme CSS -->
+    <link href='/static/visitor/css/style.css' rel="stylesheet">
+    <link href='/static/visitor/css/color/default.css' rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+<!-- /Section: navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand" href="#intro">
+                <h1>Privadus</h1>
+            </a>
+            <img src="/static/common/img/logo.jpg" height="30" width="30">
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#intro">Home</a></li>
+                <li><a  href="#about">About</a></li>
+                <li><a href="#market">Marketplace</a></li>
+                <li><a href="#signup">Sign up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- /Section: navigation -->
+
+
+
+<section id="intro" class="intro">
+    <div class="slogan">
+        <h2>Giving data back to the people</h2>
+        <h4>Be rewarded for controlling your privacy</h4>
+    </div>
+    <div class="page-scroll">
+        <a href="#market" class="btn btn-circle">
+            <i class="fa fa-angle-double-down animated"></i>
+        </a>
+    </div>
+</section>
+
+
+<section id="about" class="home-section text-center">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="section-heading">
+                        <h2>What is Privadus?</h2>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-30">
+            </div>
+        </div>
+        <div class="row">
+            <p> Privadus is the new way of correctly advertise the desired demographic while preserving their anonymity.</p>
+            <p> As an individual, all your information will be kept encrypted and never given out to the other parties. </p>
+            <p> As a business, our user search guarantees to find you the correct eyeballs and to give them your ad. </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="market" class="home-section text-center bg-gray">
+    <div class="heading-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="section-heading">
+                        <h2>The marketplace</h2>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-30">
+            </div>
+        </div>
+        <div class="row">
+            <p> The marketplace will show statistics of anonymous businesses of how much they spent on advertising. </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="signup" class="home-section text-center">
+    <div class="heading-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="section-heading">
+                        <h2>Get Involved!</h2>
+                        <i class="fa fa-2x fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-lg-offset-5">
+                <hr class="marginbot-30">
+            </div>
+        </div>
+        <div class="row">
+            <p><b>Be part of the market!</b></p>
+            <ng-include src="'/static/visitor/app/views/signup.html'"></ng-include>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="wow shake" data-wow-delay="0.4s">
+                    <div class="page-scroll marginbot-30">
+                        <a href="#intro" id="totop" class="btn btn-circle">
+                            <i class="fa fa-angle-double-up animated"></i>
+                        </a>
+                    </div>
+                </div>
+                <p>&copy;Group 11. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Core JavaScript Files -->
+<script src='/static/common/js/jquery.min.js'></script>
+<script src='/static/common/js/bootstrap.min.js'></script>
+<script src='/static/common/js/jquery.easing.min.js'></script>
+<script src='/static/common/js/jquery.scrollTo.js'></script>
+<!-- Custom Theme JavaScript -->
+<script src='/static/visitor/js/custom.js'></script>
+
+<!-- Bower Components -->
+<script type="text/javascript" src='/static/common/bower_components/angular/angular.min.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-resource/angular-resource.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-cookies/angular-cookies.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-sanitize/angular-sanitize.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+<script type="text/javascript" src='/static/common/bower_components/angular-animate/angular-animate.min.js'></script>
+
+
+<script src='/static/visitor/app/app.js'></script>
+
+<!--<script src='/static/app/auth_app.js'></script>-->
+<script src='/static/visitor/app/controllers/login.js'></script>
+<script src='/static/visitor/app/controllers/logout.js'></script>
+<script src='/static/visitor/app/controllers/signup.js'></script>
+<script src='/static/visitor/app/services/djangoAuth.js'></script>
+<script src='/static/visitor/app/services/validate.js'></script>
+
+</body>
+</html>

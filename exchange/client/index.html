@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privadus</title>
+
+    <link href='/static/common/css/bootstrap.min.css' rel="stylesheet">
+    <link href='/static/common/fonts/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css">
+    <link href='/static/common/bower_components/bootstrap-toggle/css/bootstrap-toggle.min.css' rel="stylesheet">
+
+    <link href='/static/user/app/css/main.css' rel="stylesheet">
+
+    <link href='/static/user/app/css/dash.css' rel="stylesheet">
+    <link href='/static/user/app/css/campaigns.new.css' rel="stylesheet">
+</head>
+
+<body ng-app="webApp">
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-default navbar-static-top" style="margin-bottom: 0; background-color: #f2f2f2">
+            <div class="navbar-header">
+                <a class="navbar-brand"><img src="/static/common/img/logo.jpg" height="30" width="30">  Privadus</a>
+            </div>
+            <top-bar></top-bar>
+            <side-bar></side-bar>
+        </nav>
+
+        <div id="page-wrapper" fx-animate ui-view></div>
+
+    </div>
+
+
+    <!-- Bower Components -->
+    <script type="text/javascript" src='/static/common/bower_components/jquery/dist/jquery.min.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/bootstrap-toggle/js/bootstrap-toggle.min.js'></script>
+    <script type="text/javascript" src='/static/common/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/jquery-ui/jquery-ui.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular/angular.min.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-ui-sortable/sortable.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-resource/angular-resource.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-cookies/angular-cookies.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-sanitize/angular-sanitize.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/angular-ui-router/release/angular-ui-router.min.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/flow.js/dist/flow.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/ng-flow/dist/ng-flow.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/ngFx/dist/ngFx.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/restangular/dist/restangular.js'></script>
+    <script type="text/javascript" src='/static/common/bower_components/lodash/dist/lodash.js'></script>
+    <script type="text/javascript" src='/static/common/js/spin.js'></script>
+
+    <script src='/static/user/app/app.js'></script>
+    <script src='/static/user/app/directives/sidebar.js'></script>
+    <script src='/static/user/app/directives/topbar.js'></script>
+
+    <script src='/static/user/app/services/match_query.js'></script>
+    <script src='/static/user/app/directives/loading.js'></script>
+    <script src='/static/user/app/directives/toggle-switch.js'></script>
+
+    <script src='/static/user/app/controllers/dash.js'></script>
+    <script src='/static/user/app/controllers/campaigns.list.js'></script>
+    <script src='/static/user/app/controllers/campaigns.new.js'></script>
+    <script src='/static/user/app/controllers/campaigns.detail.js'></script>
+    <script src='/static/user/app/controllers/agents.new.js'></script>
+    <script src='/static/user/app/controllers/agents.detail.js'></script>
+    <script src='/static/user/app/controllers/wallet.js'></script>
+    <script src='/static/user/app/controllers/settings.js'></script>
+    <script src='/static/user/app/controllers/help.js'></script>
+</body>
+</html>

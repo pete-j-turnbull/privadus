@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-header text-center"> New Smart Agent</h2>
+    </div>
+</div>
+
+<div class="row">
+
+    <form id="agents-new__form">
+        <div class="col-md-1"></div>
+        <div class="col-md-9">
+            <div class="row">
+                <br>
+                <h4>Search for users in a specific demographic</h4><br>
+                <div class="form-group">
+                    <label for="id_name">Name</label>
+                    <input id="id_name" ng-model="a_model.name" type="text" class="form-control" name="name" placeholder="Give your new agent a name" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="id_gender">Gender</label>
+                    <select class="form-control" ng-model="d_model.gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Both</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="id_agemin">Minimum age</label>
+                    <input id="id_agemin" ng-model="d_model.min_age" type="text" class="form-control" placeholder="Enter minumum age" required="required" />
+                    <label for="id_agemax">Maximum age</label>
+                    <input id="id_agemax" ng-model="d_model.max_age" type="text" class="form-control" placeholder="Enter maximum age" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="id_location">Location</label>
+                    <input id="id_location" ng-model="d_model.location" type="text" class="form-control" placeholder="Enter address or postcode" required="required" />
+                    <label for="id_radius">Radius (miles)</label>
+                    <input class="form-control" ng-model="d_model.radius" type="text" placeholder="Distance from location" required="required" />
+                </div>
+            </div>
+
+            <div class="row">
+                <button ng-click="findMatches()" class="btn btn-info pull-right">
+                    <i class="glyphicon glyphicon-ok fa-fw"></i> Find Matches
+                </button>
+            </div>
+
+
+        </div>
+    </form>
+
+</div>

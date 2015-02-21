@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-header text-center"> New Advertising Campaign</h2>
+    </div>
+</div>
+
+<div class="row" flow-init
+     flow-files-submitted="$flow.upload()"
+     ng-init="init_model($flow)">
+
+
+
+    <form id="camps-new__form" method="post">
+        <div class="col-md-1"></div>
+        <div class="col-md-9" ng-controller="FileHandlerCtrl">
+            <div class="row" flow-prevent-drop
+                 ng-style="style">
+
+                <br>
+                <h4>Create a Smart Campaign</h4><br>
+                <div class="form-group">
+                    <label for="id_name">Name</label>
+                    <input id="id_name" ng-model="model.name" type="text" class="form-control" name="name" placeholder="Enter name of campaign" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="id_description">Description</label>
+                    <textarea maxlength="2000" rows="5" id="id_description" ng-model="model.description" type="text" class="form-control" name="description" placeholder="Enter description" />
+                </div>
+                <div class="form-group">
+                    <label for="id_description">Advertisements</label>
+                    <br>
+                    <!--
+                    <div class="col-md-6">
+                        <div class="alert" flow-drop flow-drag-enter="class='alert-success'" flow-drag-leave="class=''"
+                            ng-class="class">
+                            Drag And Drop your file here
+                        </div>
+                    </div>
+                    -->
+                    <table class="table table-hover table-bordered table-striped" flow-transfers>
+                        <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Size</th>
+                            <th>Progress</th>
+                            <th>Ad Type</th>
+                            <th>Control</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="file in files">
+                            <td><img class="thumbnail" ng-if="isComplete(file)" ng-src="{{file.name}}" /></td>
+                            <td>{{file.size}}</td>
+                            <td>{{file.progress()}}</td>
+                            <td>Full page</td>
+                            <td>
+                              <button class="btn btn-large btn-danger" ng-click="file.cancel()">
+                                <i class="glyphicon glyphicon-remove fa-fw"></i>Delete
+                              </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <span class="btn btn-info" flow-btn><i class="glyphicon glyphicon-plus fa-fw"></i> New Advert</span>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <button ng-click="promptForAgent()" ng-disabled="stillUploading()" class="btn btn-success pull-right">
+                    <i class="glyphicon glyphicon-ok fa-fw"></i> Create Campaign
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

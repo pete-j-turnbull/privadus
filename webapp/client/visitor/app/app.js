@@ -11,8 +11,8 @@ webAppModule.run(function(djangoAuth) {
 });
 
 
+/*
 webAppModule.controller('LoginWindowCtrl', function ($scope, $modal) {
-
   $scope.open = function () {
     var modalInstance = $modal.open({
       templateUrl: '/static/visitor/app/views/login.html',
@@ -28,3 +28,4 @@ webAppModule.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
         $modalInstance.dismiss('cancel');
     };
 });
+*/

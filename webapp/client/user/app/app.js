@@ -92,6 +92,16 @@ angular.module('webApp')
                     speed: 1200
                 }
             })
+            .state('agents_list', {
+                url: '/agents/:cid',
+                templateUrl: '/static/user/app/partials/agents.list.html',
+                controller: "CampaignsListCtrl",
+                animation: {
+                    enter: 'fx-fade-down',
+                    ease: 'cubic',
+                    speed: 1200
+                }
+            })
             .state('agents_new', {
                 url: '/agents_new/:cid',
                 templateUrl: '/static/user/app/partials/agents.new.html',

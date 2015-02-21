@@ -88,10 +88,19 @@ class Demographic(models.Model):
 
 class Advert(models.Model):
     campaign = models.ForeignKey(Campaign)
-    image_path = models.CharField(max_length=128)
+    image_path = models.CharField(max_length=256)
+
+
+class Voucher(models.Model):
+    campaign = models.ForeignKey(Campaign)
+    image_path = models.CharField(max_length=256)
+    b_address = models.CharField(max_length=256)
+    expiry_date = models.DateTimeField()
+    creation_date = models.DateTimeField()
+    issued = models.BooleanField(default=False)
 
 
 class PhoneUser(models.Model):
     deviceId = models.CharField(max_length=30)
-    httpServerUrl = models.CharField(max_length=200)
+    socketId = models.CharField(max_length=100)
     waddress = models.CharField(max_length=100)

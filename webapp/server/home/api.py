@@ -218,7 +218,7 @@ class AdvertResource(ModelResource):
             }, HttpForbidden)
 
         img_path = save_img(img, file_ext, user_id, self.media_manager)
-        abs_img_path = "146.169.47.78:55052%s" % img_path
+        abs_img_path = "http://privadus.co.uk%s" % img_path
         return self.create_response(request, {
             'success': True,
             'image_path': abs_img_path

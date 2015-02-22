@@ -1,0 +1,17 @@
+<div flow-init
+     flow-files-submitted="$flow.upload()"
+     ng-init="init_model()"
+     flow-file-success="success($file, $message)">
+
+    <div class="modal-header">
+        <h3 class="modal-title">New Voucher</h3>
+    </div>
+    <div class="modal-body">
+        <span type="button" class="btn btn-default" flow-btn>Browse</span>
+        {{ model.voucher }}
+    </div>
+
+    <div class="modal-footer">
+        <span type="button" class="btn btn-success" ng-disabled="!uploaded" ng-click="add()">Add</span>
+    </div>
+</div>

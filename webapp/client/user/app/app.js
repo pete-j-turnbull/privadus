@@ -143,13 +143,7 @@ angular.module('webApp')
                     speed: 1200
                 }
             });
-
     })
     .run(['$state', function ($state) {
         $state.transitionTo('dash');
-    }])
-    .controller("MainCtrl", ['$state', function ($state) {
-        $scope.model = {
-            profile: ''
-        }
     }]);

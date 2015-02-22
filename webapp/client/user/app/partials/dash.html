@@ -33,10 +33,11 @@
                         <i class="fa fa-thumbs-up fa-fw"></i> Top Performing
                     </div>
                     <div class="list-group">
-                        <a class="list-group-item">Campaign 1</a>
-                        <a class="list-group-item">Campaign 2</a>
-                        <a class="list-group-item">Campaign 3</a>
-                        <a class="list-group-item">Campaign 3</a>
+
+                        <a ng-repeat="agent in model.campaigns" ui-sref="agents_detail({ aid : agent.id })"
+                           class="list-group-item">{{ agent.name }} <i class="fa fa-level-up pull-right"></i>
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -47,10 +48,11 @@
                         <i class="octicon octicon-alert fa-fw"></i> Warnings
                     </div>
                     <div class="list-group">
-                        <a class="list-group-item">Campaign 1</a>
-                        <a class="list-group-item">Campaign 2</a>
-                        <a class="list-group-item">Campaign 3</a>
-                        <a class="list-group-item">Campaign 3</a>
+
+                        <a ng-repeat="agent in model.campaigns" ui-sref="agents_detail({ aid : agent.id })"
+                           class="list-group-item">{{ agent.name }} <i class="fa fa-level-down pull-right"></i>
+                        </a>
+
                     </div>
                 </div>
             </div>

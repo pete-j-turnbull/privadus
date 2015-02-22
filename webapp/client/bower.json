@@ -1,6 +1,11 @@
 {
     "name": "Privadus",
     "dependencies": {
-      "octicons": "/Users/pete/Downloads/octicons/"
+      "octicons": "/Users/pete/Downloads/octicons/",
+      "awesome-bootstrap-checkbox": "/Users/pete/Development/awesome-bootstrap-checkbox/"
     }
-  }
+}
+
+
+
+

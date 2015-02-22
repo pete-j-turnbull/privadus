@@ -2,7 +2,13 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h3 class="page-header">admin / <b>campaigns</b></h3>
+            <h3 class="page-header">
+                admin / <b>campaigns</b>
+                <button type="button" class="btn btn-default pull-right" ui-sref="campaigns_new">
+                    <i class="octicon octicon-plus"></i>
+                    New
+                </button>
+            </h3>
         </div>
     </div>
 
@@ -60,20 +66,3 @@
 
     </div>
 </div>
-
-        <!--
-    <div class="col-lg-12">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <i class="fa fa-shield fa-fw"></i> All Campaigns
-            </div>
-
-            <div class="list-group">
-                <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
-                   class="list-group-item">{{ campaign.name }} <span class="badge alert-danger">0/500</span>
-                </a>
-            </div>
-
-        </div>
-    </div>
-    -->

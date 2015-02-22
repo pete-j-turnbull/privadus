@@ -1,23 +1,56 @@
 <div my-loading-spinner="viewLoading">
+
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header text-center"> Wallet</h2>
+            <h3 class="page-header">
+                admin / <b>wallet</b>
+
+                <div class="btn-group pull-right" role="group">
+                    <button type="button" class="btn btn-default">
+                        <i class="octicon octicon-plus"></i>
+                        Add Credit
+                    </button>
+                    <button type="button" class="btn btn-default">
+                        <i class="fa fa-minus"></i>
+                        Withdraw
+                    </button>
+
+                </div>
+
+            </h3>
         </div>
     </div>
 
-    <div class="row">
-        <br>
-        <div class="col-lg-8">
-            <table class="table table-striped">
-                <tr>
-                    <td><b>Wallet address</b></td>
-                    <td>{{ model.wallet.address }}</td>
-                </tr>
-                <tr>
-                    <td><b>Balance</b></td>
-                    <td>{{ model.wallet.balance }}</td>
-                </tr>
-            </table>
+    <div class="container page-content">
+
+
+        <div class="col-lg-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <i class="fa fa-shield fa-fw"></i> Wallet View
+                </div>
+                <p>Wallet address: {{ model.wallet.address }}</p>
+                <p>Current balance: {{ model.wallet.balance }}</p>
+            </div>
         </div>
+
+
+        <div class="col-lg-8">
+            <div class="row">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-shield fa-fw"></i> Payment History
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item">0.01 BTC on Campaign 1, Agent 1 : 01/02/2015</a>
+                        <a class="list-group-item">0.4 BTC on Campaign 13, Agent 1 : 01/02/2015</a>
+                        <a class="list-group-item">1 BTC on Campaign 1, Agent 1 : 01/02/2015</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>

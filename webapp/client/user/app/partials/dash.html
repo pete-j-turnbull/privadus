@@ -2,48 +2,102 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"> Dashboard</h1>
+            <h3 class="page-header">admin / <b>dash</b></h3>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+    <div class="container page-content">
 
-            <div class="panel panel-default">
+
+        <div class="col-lg-8">
+            <div class="panel panel-info">
                 <div class="panel-heading">
-                    <i class="fa fa-shield fa-fw"></i> Active Campaigns
+                    <i class="fa fa-shield fa-fw"></i> Portfolio Overview
                 </div>
-
-                <div class="list-group">
-                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
-                       class="list-group-item">{{ campaign.name }} <span class="badge alert-danger">0/500</span>
-                    </a>
+                <div>
+                    <br>
+                    <angularchart
+                            dataset="dataset"
+                            options="options">
+                    </angularchart>
                 </div>
-
             </div>
         </div>
 
 
-        <div class="col-lg-6">
+        <div class="col-lg-4">
 
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <i class="fa fa-shield fa-fw"></i> Active Agents
+            <div class="row">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <i class="fa fa-thumbs-up fa-fw"></i> Top Performing
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item">Campaign 1</a>
+                        <a class="list-group-item">Campaign 2</a>
+                        <a class="list-group-item">Campaign 3</a>
+                        <a class="list-group-item">Campaign 3</a>
+                    </div>
                 </div>
+            </div>
 
-                <div class="list-group">
-                    <a ng-repeat="agent in model.agents" ui-sref="agents_detail({ aid : agent.id })"
-                       class="list-group-item">{{ agent.name }} <span class="badge alert-danger">0/500</span>
-                    </a>
+            <div class="row">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <i class="octicon octicon-alert fa-fw"></i> Warnings
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item">Campaign 1</a>
+                        <a class="list-group-item">Campaign 2</a>
+                        <a class="list-group-item">Campaign 3</a>
+                        <a class="list-group-item">Campaign 3</a>
+                    </div>
                 </div>
-
             </div>
         </div>
 
 
     </div>
+</div>
 
+
+
+<!--
+<div class="row">
+<div class="col-lg-6">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-shield fa-fw"></i> Active Campaigns
+        </div>
+
+        <div class="list-group">
+            <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+               class="list-group-item">{{ campaign.name }} <span class="badge alert-danger">0/500</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="col-lg-6">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-shield fa-fw"></i> Active Agents
+        </div>
+
+        <div class="list-group">
+            <a ng-repeat="agent in model.agents" ui-sref="agents_detail({ aid : agent.id })"
+               class="list-group-item">{{ agent.name }} <span class="badge alert-danger">0/500</span>
+            </a>
+        </div>
+
+    </div>
+</div>
 
 
 </div>
 
+-->

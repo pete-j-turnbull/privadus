@@ -60,6 +60,9 @@
                     <li>
                         <a href="/signin/">Sign In</a>
                     </li>
+                    <li>
+                        <a href="/signup/">Sign Up</a>
+                    </li>
 
                 </ul>
             </div>
@@ -67,43 +70,54 @@
     </nav>
 
 
+
     <!-- Header -->
     <header>
-        <div class="container signin" ng-controller="LoginCtrl">
+        <div class="container signup" ng-controller="SignupCtrl">
             <div class="intro-text">
-
                 <div class="row">
                     <div class="col-lg-4">
                     </div>
                     <div class="col-lg-4">
 
-                        <form method="post" ng-submit="login(loginForm)" name="loginForm">
-
-                            <div class="form-group">
-                                <label for="id_email">Email Address</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                                    <input name="email" id="id_email" type="email" ng-model="model.email" placeholder="Enter email" class="form-control" required="required"/>
+                        <form id="signup-form" method="post" role="form" ng-submit="signup(signupForm)" name="signupForm">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="id_name">Name</label>
+                                        <input id="id_name" ng-model="model.name" type="text" class="form-control" name="name" placeholder="Enter name" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_organisation">Organisation</label>
+                                        <input id="id_organisation" ng-model="model.organisation" type="text" class="form-control" name="organisation" placeholder="Enter organisation" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_email">Email Address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><span class="fa fa-envelope"></span></span>
+                                            <input id="id_email" ng-model="model.email" type="email" class="form-control" name="email" placeholder="Enter email" required="required" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_password">Password</label>
+                                        <input id="id_password" ng-model="model.password" type="password" class="form-control" name="password" placeholder="Enter password" required="required" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_password2">Re-type Password</label>
+                                        <input id="id_password2" ng-model="model.password2" type="password" class="form-control" name="password2" placeholder="Re-Enter password" required="required" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="id_password">Password</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-log-in"></span></span>
-                                    <input name="password" id="id_password" type="password" ng-model="model.password" placeholder="Enter password" class="form-control" required="required"/>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <button type="submit" ng-disabled="signupForm.$invalid" class="btn btn-info pull-right">Sign Up</button>
                                 </div>
-
-                                <div class="alert alert-danger _animate" ng-if="error">{{error}}</div>
                             </div>
-
-                            <button ng-disabled="loginForm.$invalid" type="submit" class="btn btn-success">
-                                Sign in <i class="fa fa-sign-in"></i> </button>
-
                         </form>
+
 
                     </div>
                 </div>
-
             </div>
         </div>
     </header>
@@ -132,6 +146,7 @@
     <script src='/static/visitor/app/app.js'></script>
 
     <script src='/static/visitor/app/controllers/login.js'></script>
+    <script src='/static/visitor/app/controllers/signup.js'></script>
     <script src='/static/visitor/app/services/djangoAuth.js'></script>
     <script src='/static/visitor/app/services/validate.js'></script>
 

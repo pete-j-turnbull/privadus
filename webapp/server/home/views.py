@@ -22,6 +22,13 @@ def signin(request):
     if request.user.is_authenticated():
         #Redirect user to index
         return HttpResponseRedirect('/')
-        return render(request, 'user/userhome.html', {})
     else:
         return render(request, 'visitor/signin.html', {})
+
+
+def signup(request):
+    if request.user.is_authenticated():
+        #Redirect user to index
+        return HttpResponseRedirect('/')
+    else:
+        return render(request, 'visitor/signup.html', {})

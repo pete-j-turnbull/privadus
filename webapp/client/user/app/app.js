@@ -7,7 +7,8 @@ angular.module("webApp", [
     "flow",
     "ngCookies",
     "ngResource",
-    "ngSanitize"
+    "ngSanitize",
+    "angularChart"
 ]);
 angular.module('webApp')
     .config(function (RestangularProvider) {
@@ -45,6 +46,16 @@ angular.module('webApp')
                 url: '/help',
                 templateUrl: '/static/user/app/partials/help.html',
                 controller: "HelpCtrl",
+                animation: {
+                    enter: 'fx-fade-down',
+                    ease: 'cubic',
+                    speed: 1200
+                }
+            })
+            .state('profile', {
+                url: '/profile/:uid',
+                templateUrl: '/static/user/app/partials/profile.html',
+                controller: "ProfileCtrl",
                 animation: {
                     enter: 'fx-fade-down',
                     ease: 'cubic',
@@ -93,9 +104,9 @@ angular.module('webApp')
                 }
             })
             .state('agents_list', {
-                url: '/agents/:cid',
+                url: '/agents',
                 templateUrl: '/static/user/app/partials/agents.list.html',
-                controller: "CampaignsListCtrl",
+                controller: "AgentsListCtrl",
                 animation: {
                     enter: 'fx-fade-down',
                     ease: 'cubic',

@@ -68,7 +68,7 @@ body {
 
 header {
     background-color: #000;
-    background-image: url('/static/images/bg8.jpg');
+    background-image: url('/static/images/bg9.jpg');
     padding: 0 40px;
     color: #fff;
     text-align: center;
@@ -82,14 +82,12 @@ header .intro-text {
 }
 
 header .intro-text .intro-lead-in {
-    margin-bottom: 35px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 22px;
     line-height: 30px;
 }
 
 header .intro-text .intro-heading {
-    margin-bottom: 25px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 40px;
@@ -98,8 +96,8 @@ header .intro-text .intro-heading {
 }
 
 header .intro-text .intro-arrow {
-    padding-top: 300px;
-    line-height: 50px;
+    padding-top: 10px;
+    line-height: 20px;
 }
 
 @media(min-width:768px) {
@@ -112,7 +110,6 @@ header .intro-text .intro-arrow {
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 20px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 20px;
         line-height: 40px;
@@ -122,7 +119,6 @@ header .intro-text .intro-arrow {
     }
 
     header .intro-text .intro-heading {
-        margin-bottom: 15px;
         text-transform: uppercase;
         font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 40px;
@@ -131,7 +127,6 @@ header .intro-text .intro-arrow {
     }
 
     header .intro-text .intro-arrow {
-    margin-bottom: 25px;
     line-height: 50px;
 }
 }
@@ -168,7 +163,7 @@ section h3.section-subheading {
 
 footer {
     padding: 50px 0;
-    background-color: #000000;
+    background-color: #3292aa;
 }
 
 .app-download {
@@ -343,7 +338,7 @@ footer {
 
     .navbar-custom.top-nav-collapse {
         padding: 0;
-        background-color: #000000;
+        background-color: #3292aa;
         border-bottom: 1px solid rgba(255,255,255,.3);
     }
 }

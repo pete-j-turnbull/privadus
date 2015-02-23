@@ -1,19 +1,69 @@
 <div my-loading-spinner="viewLoading">
+
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header text-center"> {{ model.agent.name }}</h2>
+            <h3 class="page-header">
+                claudia / agents / <b>{{ model.agent.name }}</b>
+                <button type="button" class="btn btn-default pull-right">
+                    <i class="fa fa-pencil fa-fw"></i>
+                    Edit
+                </button>
+            </h3>
         </div>
     </div>
 
-    <div class="row">
-        <div id="camps-new__container" class="col-lg-12">
-            <p>
-                {{ model.agent.budget }}
-            </p>
-            <p>
-                {{ model.agent.audience }}
-            </p>
+    <div class="container page-content">
 
+        <div class="row">
+            <div class="col-lg-4">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-question fa-fw"></i> Description
+                    </div>
+                    <div class="panel-body">
+                        <p>{{ model.agent.name }}</p>
+                        <p>{{ model.agent.budget }}</p>
+                        <p>{{ model.agent.audience }}</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-shield fa-fw"></i> Agent Health
+                    </div>
+                    <div>
+                        <br>
+                        <angularchart
+                                dataset="dataset"
+                                options="options">
+                        </angularchart>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <i class="fa fa-shield fa-fw"></i> Agent Progress
+                    </div>
+                    <div>
+                        <br>
+                        <angularchart
+                                dataset="dataset"
+                                options="options">
+                        </angularchart>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>

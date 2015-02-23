@@ -5,8 +5,8 @@ angular.module("webApp")
             $scope.model = {wallet:''};
 
             var data = {
-                address: '2',
-                balance: 5
+                address: '20fg56rr4423fderf54f',
+                balance: '0.25BTC'
             };
 
             $timeout(function () {

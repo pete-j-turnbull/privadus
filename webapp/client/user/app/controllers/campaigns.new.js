@@ -2,8 +2,16 @@ angular.module("webApp")
     .controller("CampaignsNewCtrl", ['$state', '$scope', 'Restangular', '$modal', 'CampaignModel', '$q',
         function ($state, $scope, Restangular, $modal, CampaignModel, $q) {
 
-            $scope.init_model = function () {
-                $scope.model = CampaignModel.model;
+            CampaignModel.init();
+            $scope.model = {name: '', description: '', add_agent: false, ads: {}, vouchers: {}};
+
+            var add_ad = function (advert) {
+                $scope.model.ads += advert;
+                $scope.model.add_agent = true;
+            };
+            var add_voucher = function (voucher) {
+                $scope.model.voucher += voucher;
+                $scope.model.add_agent = true;
             };
 
             $scope.new_advert = function () {
@@ -11,9 +19,7 @@ angular.module("webApp")
                     templateUrl: '/static/user/app/partials/new_advert.html',
                     backdrop: 'static',
                     controller: function ($scope, $modalInstance, CampaignModel) {
-                        $scope.init_model = function () {
-                            $scope.model = {advert: ''};
-                        };
+                        $scope.model = {advert: ''};
                         $scope.success = function (file, message) {
                             file.name = JSON.parse(message).image_path;
                             file.complete = true;
@@ -21,21 +27,19 @@ angular.module("webApp")
                             $scope.model.advert = file.name;
                         };
                         $scope.add = function () {
-                            CampaignModel.add_advert($scope.model.advert);
-                            
+                            add_ad($scope.model.advert);
+                            $modalInstance.close();
                         };
                     }
                 });
-            }
+            };
 
             $scope.new_voucher = function () {
                 var modalInstance = $modal.open({
                     templateUrl: '/static/user/app/partials/new_voucher.html',
                     backdrop: 'static',
                     controller: function ($scope, $modalInstance, CampaignModel) {
-                        $scope.init_model = function () {
-                            $scope.model = {voucher: ''};
-                        };
+                        $scope.model = {voucher: ''};
                         $scope.success = function (file, message) {
                             file.name = JSON.parse(message).image_path;
                             file.complete = true;
@@ -43,29 +47,42 @@ angular.module("webApp")
                             $scope.model.voucher = file.name;
                         };
                         $scope.add = function () {
-                            CampaignModel.add_advert($scope.model.voucher);
+                            add_voucher($scope.model.voucher);
+                            $modalInstance.close();
                         };
                     }
                 });
+            };
+            
+            $scope.create_campaign = function () {
+
             }
     }])
     .factory("CampaignModel",
-        function() {
+        function($rootScope) {
+            var model;
+            var init = function () {
+                model = {name: '', description: '',  add_agent: false, ads: {}, vouchers: {}};
+            };
+            var update = function (newModel) {
+                model = newModel;
+                broadcast(model);
+            };
+            var broadcast = function () {
+                $rootScope.$broadcast('CampaignModel.update', model);
+            };
+            var add_advert = function (advert) {
+                model.ads += advert;
+            };
+            var add_voucher = function (voucher) {
+                model.vouchers += voucher;
+            };
+
             return {
-                reset: function () {
-                    this.model = {name: '', description: '', ads: {}, vouchers: {}};
-                },
-                add_advert: function (advert) {
-                    this.model.ads += advert;
-                },
-                add_voucher: function (voucher) {
-                    this.model.vouchers += voucher;
-                },
-                model: {
-                    name: '',
-                    description: '',
-                    ads: {},
-                    vouchers: {}
-                }
+                init: init,
+                update: update,
+                broadcast: broadcast,
+                add_advert: add_advert,
+                add_voucher: add_voucher
             };
         });

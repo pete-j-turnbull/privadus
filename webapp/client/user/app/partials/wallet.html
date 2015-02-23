@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h3 class="page-header">
-                admin / <b>wallet</b>
+                claudia / <b>wallet</b>
 
                 <div class="btn-group pull-right" role="group">
                     <button type="button" class="btn btn-default">
@@ -29,8 +29,10 @@
                 <div class="panel-heading">
                     <i class="fa fa-shield fa-fw"></i> Wallet View
                 </div>
-                <p>Wallet address: {{ model.wallet.address }}</p>
-                <p>Current balance: {{ model.wallet.balance }}</p>
+                <div class="panel-body">
+                    <p>Wallet address: {{ model.wallet.address }}</p>
+                    <p>Current balance: {{ model.wallet.balance }}</p>
+                </div>
             </div>
         </div>
 

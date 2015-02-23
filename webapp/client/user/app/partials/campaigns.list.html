@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-lg-12">
             <h3 class="page-header">
-                admin / <b>campaigns</b>
+                claudia / <b>campaigns</b>
                 <button type="button" class="btn btn-default pull-right" ui-sref="campaigns_new">
                     <i class="octicon octicon-plus"></i>
-                    New
+                    New Campaign
                 </button>
             </h3>
         </div>
@@ -22,10 +22,11 @@
                 </div>
                 <div class="list-group">
 
-                    <a class="list-group-item">
+                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                       class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">
-                                Campaign 1
+                                {{ campaign.name }}
                             </div>
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
@@ -44,12 +45,13 @@
                 </div>
                 <div class="list-group">
 
-                    <a class="list-group-item">
+                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                       class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">
-                                Campaign 2
+                                {{ campaign.name }}
                             </div>
-                            <div class="progress progress-striped">
+                            <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
                                      aria-valuemin="0" aria-valuemax="100" style="width: 30%">
                                 </div>

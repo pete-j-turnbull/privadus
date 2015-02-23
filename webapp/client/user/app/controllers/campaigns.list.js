@@ -3,8 +3,8 @@ angular.module("webApp")
         $scope.viewLoading = true;
 
         $scope.model = {
-            campaigns_active: [{name: 'Active 1', id: 1}, {name: 'Active 2', id: 2}, {name: 'Active 3', id: 3}],
-            campaigns_inactive: [{name: 'Inactive 1', id: 4}]
+            campaigns_active: [{name: 'Tesco', id: 1}, {name: 'Morrisons', id: 2}, {name: 'Sainsburys', id: 3}],
+            campaigns_inactive: []
         }
 
         Restangular.all('campaign').getList()

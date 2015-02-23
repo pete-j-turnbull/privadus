@@ -1,9 +1,11 @@
 angular.module("webApp")
     .controller("AgentsDetailCtrl", ['$state', '$scope', 'Restangular', '$stateParams', '$q',
         function ($state, $scope, Restangular, $stateParams, $q) {
-            $scope.viewLoading = true;
-            $scope.model = {agent: ''};
+            $scope.viewLoading = false;
+            $scope.model = {agent: {name: 'Females 30-45 London', demographic: {min_age: 30, max_age: 45, gender: 'Female',
+                location: 'London', radius: '10 miles', interests: ['Coding', 'Sport']}}};
 
+            /*
             Restangular.one('agent', $stateParams.aid).get().then(
                 function (agent) {
                     $scope.model.agent = agent;
@@ -12,6 +14,7 @@ angular.module("webApp")
                     $scope.failed = true;
                     $scope.error = reason;
                 });
+            */
 
 
             $scope.dataset = [
@@ -46,18 +49,6 @@ angular.module("webApp")
             {
                 'day': '2015-01-09',
                 'p_health': 111
-            },
-            {
-                'day': '2015-01-10',
-                'p_health': 112
-            },
-            {
-                'day': '2015-01-11',
-                'p_health': 112
-            },
-            {
-                'day': '2015-01-12',
-                'p_health': 111
             }
         ];
 
@@ -68,7 +59,7 @@ angular.module("webApp")
                 name: 'Campaign'
             }],
             size: {
-                height: 365
+                height: 265
             },
             xAxis: {
                 key: 'day',

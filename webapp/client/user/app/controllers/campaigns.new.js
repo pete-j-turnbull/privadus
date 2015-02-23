@@ -55,7 +55,7 @@ angular.module("webApp")
             };
             
             $scope.create_campaign = function () {
-
+                $state.transitionTo('campaigns_detail', {'cid': 1});
             }
     }])
     .factory("CampaignModel",

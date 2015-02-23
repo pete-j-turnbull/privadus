@@ -2,7 +2,7 @@ angular.module("webApp")
     .controller("CampaignsDetailCtrl", ['$state', '$scope', 'Restangular', '$stateParams', '$q',
         function ($state, $scope, Restangular, $stateParams, $q) {
             $scope.viewLoading = true;
-            $scope.model = {campaign: '', campaign_adverts: ''};
+            $scope.model = {campaign: '', campaign_adverts: '', campaign_t: {name: 'Ocado Campaign', description: 'New Campaign for Ocado'}};
 
             $q.all([Restangular.one('campaign', $stateParams.cid).get(), Restangular.all('advert').getList()]).then(
                 function (data) {

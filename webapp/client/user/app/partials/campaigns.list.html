@@ -22,7 +22,7 @@
                 </div>
                 <div class="list-group">
 
-                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                    <a ng-repeat="campaign in model.campaigns_active" ui-sref="campaigns_detail({ cid : campaign.id })"
                        class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">
@@ -45,7 +45,7 @@
                 </div>
                 <div class="list-group">
 
-                    <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                    <a ng-repeat="campaign in model.campaigns_inactive" ui-sref="campaigns_detail({ cid : campaign.id })"
                        class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">

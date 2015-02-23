@@ -37,6 +37,10 @@ angular.module("webApp")
                             reject('Failed to create demographic.')
                         })
                 })
+            };
+
+            $scope.create_agent = function () {
+                $state.transitionTo('agents_detail', {'aid': 1});
             }
 
 

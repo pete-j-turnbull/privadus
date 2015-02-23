@@ -19,7 +19,7 @@
                 </div>
                 <div class="list-group">
 
-                    <a ng-repeat="agent in model.agents" ui-sref="agents_detail({ aid : agent.id })"
+                    <a ng-repeat="agent in model.agents_active" ui-sref="agents_detail({ aid : agent.id })"
                        class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="list-group">
 
-                    <a ng-repeat="agent in model.agents" ui-sref="agents_detail({ aid : agent.id })"
+                    <a ng-repeat="agent in model.agents_inactive" ui-sref="agents_detail({ aid : agent.id })"
                        class="list-group-item">
                         <div class="progress-wrapper">
                             <div class="progress-label">

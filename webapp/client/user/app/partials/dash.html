@@ -34,7 +34,7 @@
                     </div>
                     <div class="list-group">
 
-                        <a ng-repeat="campaign in model.campaigns" ui-sref="campaign_detail({ cid : campaign.id })"
+                        <a ng-repeat="campaign in model.campaigns_top" ui-sref="campaign_detail({ cid : campaign.id })"
                            class="list-group-item">{{ campaign.name }} <i class="fa fa-level-up pull-right"></i>
                         </a>
 
@@ -49,7 +49,7 @@
                     </div>
                     <div class="list-group">
 
-                        <a ng-repeat="campaign in model.campaigns" ui-sref="campaigns_detail({ cid : campaign.id })"
+                        <a ng-repeat="campaign in model.campaigns_warn" ui-sref="campaigns_detail({ cid : campaign.id })"
                            class="list-group-item">{{ campaign.name }} <i class="fa fa-level-down pull-right"></i>
                         </a>
 

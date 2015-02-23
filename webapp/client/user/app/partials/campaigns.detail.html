@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h3 class="page-header">
-                claudia / campaigns / <b>{{ model.campaign.name }}</b>
+                claudia / campaigns / <b>{{ model.campaign_t.name }}</b>
                 <button type="button" class="btn btn-default pull-right" ui-sref="agents_new({ cid : model.campaign.id })">
                     <i class="octicon octicon-plus fa-fw"></i>
                     New Agent
@@ -41,7 +41,7 @@
                         <i class="fa fa-question fa-fw"></i> Description
                     </div>
                     <div class="panel-body">
-                        {{ model.campaign.description }}
+                        {{ model.campaign_t.description }}
                     </div>
                 </div>
             </div>
